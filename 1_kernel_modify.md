@@ -11,6 +11,15 @@
          return 0;
  }
  ````
+ ````
+ 部分国酒app似乎会针对notify返回值做处理，这样修改会导致Kernel Panic，
+ 在inotify_add_watch中覆盖标志位应该可以绕过这部分检测
+ 
+ if ( strstr(pathname, "/mem") || strstr(pathname, "/pagemap") ) {
+        /* override mask to meaning-less state */
+        mask = IN_DELETE;
+}
+ ````
 - `kernel/oneplus/msm8996/fs/proc/array.c`
   - `task_state_array`数组，将`t (tracing stop)`修改为`S (sleeping)` ( 第15条 )
   - 找到`static inline void task_state`函数，添加以下判断（ 第11条 ）
