@@ -1,8 +1,10 @@
+
 后来发现，由于分发协议的限制，各厂商的`Kernel`层都是开源的，尽管更新不频繁，但是基本可用。
 如果仅修改`Kernel`而不修改`framework`层，那么可以不仅可以保留原系统，降低被风控的风险，而且编译速度也可以得到极大的提升。
+
 ---
 update:
-可以直接使用[github actions]([https://github.com/Nappp/roms/blob/ANE_PIE_EMUI9.1.0/.github/workflows/main.yml](https://github.com/Nappp/roms/actions/workflows/main.yml))编译，大概需要15分钟
+可以直接使用[github actions](https://github.com/Nappp/roms/actions/workflows/main.yml)编译，大概需要15分钟
 
 
 ---
