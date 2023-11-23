@@ -19,9 +19,11 @@
 
 7. 安装一些gnu的工具
 
-   `brew install coreutils grep`
+   `brew install coreutils grep dtc`
+   `rm /Volumes/huawei/code/Code_Opensource/kernel/tools/dtc`
+   `ln -s /opt/homebrew/bin/dtc /Volumes/huawei/code/Code_Opensource/kernel/tools/dtc`
 
-8. 根据文档指引开始编译即可
+9. 根据文档指引开始编译即可
 
 ````
 export PATH=/opt/homebrew/opt/coreutils/libexec/gnubin:/opt/homebrew/opt/grep/libexec/gnubin:/Volumes/huawei/aarch64-linux-android-4.9/bin:$PATH
