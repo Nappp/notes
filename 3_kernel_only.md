@@ -1,6 +1,11 @@
 后来发现，由于分发协议的限制，各厂商的`Kernel`层都是开源的，尽管更新不频繁，但是基本可用。
 如果仅修改`Kernel`而不修改`framework`层，那么可以不仅可以保留原系统，降低被风控的风险，而且编译速度也可以得到极大的提升。
+---
+update:
+可以直接使用[github actions]([https://github.com/Nappp/roms/blob/ANE_PIE_EMUI9.1.0/.github/workflows/main.yml](https://github.com/Nappp/roms/actions/workflows/main.yml))编译，大概需要15分钟
 
+
+---
 在本人ARM Mac编译成功，M2 Mac mini编译大概需要5分钟，有以下几个要点，以华为Nove 3e（型号ANE-AL10）为例
 1. 到[官网](https://consumer.huawei.com/en/opensource/detail/?siteCode=worldwide&keywords=ANE&fileType=openSourceSoftware&pageSize=10&curPage=1)下载源码
 2. 通过`Disk Utility`创建一个**区分大小写**的分区，15GB左右即可，这里命名为`huawei`
